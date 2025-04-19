@@ -1,0 +1,5 @@
+배열은 arr[]
+배열 안에 든 것의 자료형을 앞에 int arr[]
+
+배열은 (쓰레기 값 때메) 길이를 모르지만 
+string은 앎.#incude <string> 필수. 사용시 std::string(using std 필요)
