@@ -3,3 +3,33 @@
 
 배열은 (쓰레기 값 때메) 길이를 모르지만 
 string은 앎.#incude <string> 필수. 사용시 std::string(using std 필요)
+
+함수 parameter 작성시 주의
+
+struct StudentInfo {
+	...
+};
+void printStudentInfo(const vector <vectorOfAll>) {//vectorOfAll의 타입이 vector <StudentInfo
+
+}
+
+
+int main(){
+	
+	cout << "Enter student number and subject number:";
+	int studentNumber;
+	int subjectNumber;
+	cin >> studentNumber >> subjectNumber;
+	vector <StudentInfo> vectorOfAll;// vectorOfAll의 타입이 vector <StudentInfo>
+	for (int i=0; i < studentNumber; i++)
+	{
+		
+		StudentInfo S1;
+		...
+		vectorOfAll.push_back(S1);//복사해서 벡터에 저장
+	}
+
+	
+	
+	
+}
