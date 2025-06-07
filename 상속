@@ -1,0 +1,1 @@
+class Manager : public Employee //Manager 가 Employee를 상속받음
