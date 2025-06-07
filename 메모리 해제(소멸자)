@@ -1,0 +1,11 @@
+~Matrix() {
+        for (int i = 0; i < row; i++) {
+            delete[] values[i];
+        }
+        delete[] values;
+    }
+
+
+values[i]는 “i번째 행의 배열” 블록 시작 주소
+delete[] values[i]는 그 시작 주소로부터 할당된 연속 메모리 전체를 해제
+포인터(int*)가 곧 “메모리 블록의 첫 주소”이므로, 그 주소만 알려줘도 블록 전체를 관리할 수 있는 거예요.
