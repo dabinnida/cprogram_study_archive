@@ -1,0 +1,27 @@
+Animal* a = new Dog();//Dog 객체를 힙에 생성하고, 그 주소를 부모 클래스 타입인 Animal* 포인터 a에 저장한다.
+
+class Animal
+
+class dog : public Animal
+
+//다형성이용하는 이유:간편
+
+//bad
+Horse* horse = new Horse();
+Dog* dog = new Dog();
+Elephant* elephant = new Elephant();
+
+horse->run();
+dog->run();
+elephant->run();
+
+//goog-with polymolphism
+vector<Animal*> zoo;
+
+zoo.push_back(new Horse());
+zoo.push_back(new Dog());
+zoo.push_back(new Elephant());
+
+for (Animal* a : zoo) {
+    a->run();  // 다형성 덕분에 종류 관계없이 실행!
+}
