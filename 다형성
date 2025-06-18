@@ -5,6 +5,19 @@ class Animal
 class dog : public Animal
 
 //다형성이용하는 이유:간편
+class Animal {
+public:
+    virtual void speak() const {
+        cout << "Some animal sound\n";
+    }
+};
+
+class Dog : public Animal {
+public:
+    void speak() const override {
+        cout << "Woof!\n";
+    }
+};
 
 //bad
 Horse* horse = new Horse();
