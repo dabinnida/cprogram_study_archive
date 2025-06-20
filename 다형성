@@ -38,3 +38,41 @@ zoo.push_back(new Elephant());
 for (Animal* a : zoo) {
     a->run();  // 다형성 덕분에 종류 관계없이 실행!
 }
+
+/////////////////////////////////////////////
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    virtual void speak() const {
+        cout << "Animal speaks\n";
+    }
+};
+
+class Dog : public Animal {
+public:
+    void speak() const override {
+        cout << "Dog barks\n";
+    }
+};
+
+class Cat : public Animal {
+public:
+    void speak() const override {
+        cout << "Cat meows\n";
+    }
+};
+
+int main() {
+    Animal* a1 = new Dog();
+    Animal* a2 = new Cat();
+
+    a1->speak();  // 👉 실제로 Dog::speak() 실행
+    a2->speak();  // 👉 실제로 Cat::speak() 실행
+
+    delete a1;
+    delete a2;
+    return 0;
+}
+
